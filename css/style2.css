@@ -1,0 +1,48 @@
+body {font-family: Montserrat, Helvetica Neue, sans-serif; margin: 0 auto; line-height: 2em; padding: 12px; box-sizing: border-box; color: #fff; overflow: auto;}
+body, html { height:100%; overflow:visible; } 
+body {
+	background: linear-gradient(270deg, #18f0b8, #18a2f0, #db5640);
+	background-size: 600% 600%;
+	-webkit-animation: Gradient 60s ease infinite;
+	-moz-animation: Gradient 60s ease infinite;
+	animation: Gradient 60s ease infinite;
+}
+	
+    
+    @-webkit-keyframes Gradient {
+		0%{background-position:0% 50%}
+		50%{background-position:100% 50%}
+		100%{background-position:0% 50%}
+	}
+	@-moz-keyframes Gradient {
+		0%{background-position:0% 50%}
+		50%{background-position:100% 50%}
+		100%{background-position:0% 50%}
+	}
+	@keyframes Gradient { 
+		0%{background-position:0% 50%}
+		50%{background-position:100% 50%}
+		100%{background-position:0% 50%}
+	}
+
+.wrapper {box-sizing: border-box; height: 100%; overflow: auto; }
+
+
+a {text-decoration: none; color: #fff; border-bottom: 3px solid #0068FF;}
+a:hover {color: #0068FF}
+p {font-weight: 200; font-size: 20px;}
+
+.name {font-family: Montserrat; font-size: 45px; text-transform: none; font-weight: 900; padding: 0px; border: 0px solid #ffffff; color: #ffffff; display: inline-block; position: absolute; margin-bottom: 60px; top: 60px; left: 90px;}
+
+.container {margin: 0 auto; width: 700px; padding: 120px 12px 50px; overflow: auto;}
+
+
+.meta {text-transform: uppercase; font-family: Arial, Courier New, Source Sans Pro, sans-serif; font-size: 10px; letter-spacing: .15em;}
+.meta a:hover {color: #fff;}
+
+.inline-list {list-style: none; margin: 0; padding: 0;}
+.inline-list li {display: inline-block;}
+
+footer .inline-list li {margin-right: 40px;}
+footer a {border: none; color: #0068FF;}
+footer {margin: 0 auto; position: center; bottom: 100%; right: 0px; padding: 40px 0 0 0; width: 600px; -webkit-transform: rotate(0deg);}
