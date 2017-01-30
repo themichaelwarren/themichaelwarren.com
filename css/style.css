@@ -1,0 +1,33 @@
+body { margin: 0 auto;line - height: 1.5e m;padding: 50 px;box - sizing: border - box;color: #000000; overflow: auto;}
+body, html { height:100%; overflow:visible; } 
+
+.wrapper {box-sizing: border-box; height: 100%; overflow: auto; }
+
+
+a {text-decoration: none; color: # 000;border - bottom: 1 px solid #0068FF;}
+a:hover {color: # 0068 FF }
+p { font - weight: 200;
+    font - size: 13 px; }
+
+.name { font - family: Roboto + Mono;
+    font - size: 20 px;
+    text - transform: none;
+    font - weight: 400;
+    padding: 0 px;
+    border: 0 px solid #000000; color: # 000000; }
+
+.container { margin: 0 auto;width: 700 px;padding: 50 px 50 px 50 px;overflow: auto; }
+
+
+.meta { text - transform: uppercase;
+    font - family: Arial, Courier New, Source Sans Pro, sans - serif;
+    font - size: 10 px;
+    letter - spacing: .15e m; }
+.meta a: hover { color: #000000;}
+
+.inline-list {list-style: none; margin: 0; padding: 0;}
+.inline-list li {display: inline-block;}
+
+footer .inline-list li {margin-right: 40px;}
+footer a {border: none; color: # 0068 FF; }
+footer { bottom: 100 % ;right: 0 px;padding: 40 px 0 0 0;width: 550 px; - webkit - transform: rotate(0 deg); }
