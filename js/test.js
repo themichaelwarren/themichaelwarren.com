@@ -2,7 +2,7 @@
     init()
   };
 
-  var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1AcAVPfsCuwicfgaT8LPd6bDScRJrCd0ryJncYmWFvpk/pubhtml';
+  var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQHwLPmBd9RBI-lal_bjLhAvtBT0EdBzaGOkuHqwncFA8g4l_umkFjyHKY-yDIzegMP5BMqg270iCyU/pubhtml';
 
   function init() {
     Tabletop.init({
@@ -16,11 +16,10 @@
     var tr;
     for (var i = 0; i < data.length; i++) {
       tr = $('<tr/>');
-      tr.append("<td>" + data[i].Destinations + "</td>");
-      tr.append("<td>" + data[i].Hospitality + "</td>");
-      tr.append("<td>" + data[i].Taxi + "</td>");
-            tr.append("<td>" + data[i].Hotel + "</td>");
-            tr.append("<td>" + data[i].ThankYou + "</td>");
+      tr.append("<td>" + data[i].Date + "</td>");
+      tr.append("<td>" + data[i].Artist + "</td>");
+      tr.append("<td>" + data[i].Title + "</td>");
+      tr.append("<td>" + data[i].YouTube + "</td>");
       $('table').append(tr);
     }
     console.log(data);
