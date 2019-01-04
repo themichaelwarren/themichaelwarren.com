@@ -97,24 +97,29 @@ a:active {
     text-decoration: none;
 }
 
-p>a {
+p>a,
+td>a {
     color: tomato;
 }
 
-p>a:link {
+p>a:link,
+td>a:link {
     text-decoration: none;
 }
 
-p>a:visited {
+p>a:visited,
+td>a:visited {
     text-decoration: none;
 }
 
-p>a:hover {
+p>a:hover,
+td>a:hover {
     text-decoration: none;
     border-bottom: 1px dashed;
 }
 
-p>a:active {
+p>a:active,
+td>a:active {
     text-decoration: none;
 }
 
