@@ -7,6 +7,9 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type='text/javascript' src='js/test.js'></script>
     <title>Michael Warren</title>
 </head>
 
@@ -18,10 +21,46 @@
             <a href=#pageFooter>&#9776;</a>
     </menu>
     <article id="mainArticle">
-        <div style="max-width:750px">
-          
-        </div>
+        <script>
+  window.onload = function() {
+    init()
+  };
+
+  var public_spreadsheet_url = '2PACX-1vQHwLPmBd9RBI-lal_bjLhAvtBT0EdBzaGOkuHqwncFA8g4l_umkFjyHKY-yDIzegMP5BMqg270iCyU';
+
+  function init() {
+    Tabletop.init({
+      key: public_spreadsheet_url,
+      callback: showInfo,
+      simpleSheet: true
+    })
+  }
+
+  function showInfo(data, tabletop) {
+    var tr;
+    for (var i = 0; i < data.length; i++) {
+      tr = $('<tr/>');
+      tr.append("<td>" + data[i].Date + "</td>");
+      tr.append("<td>" + data[i].Artist + "</td>");
+      tr.append("<td>" + data[i].Title + "</td>");
+      tr.append("<td>" + data[i].YouTube + "</td>");
+      $('table').append(tr);
+    }
+    console.log(data);
+  }
+    </script>
+
+          <table class="table">
+    <tr>
+        <th>Date</th>
+        <th>Artist</th>
+        <th>Title</th>
+        <th>YouTube</th>
+    </tr>
+</table>
+
     </article>
+    
     <nav id="pageNav">
         <nav class="navbar" id="pageNav">
             <a href="/" class=title>Michael Warren</a>
@@ -29,7 +68,6 @@
             <a href="/about">ABOUT</a>
             <a href="/music">MUSIC</a>
             <a href="/contact">Contact</a>
-            <a href="http://advantagelucyyy.blogspot.jp/" target="_blank">Blog</a>
         </nav>
     </nav>
     <footer id="pageFooter">
