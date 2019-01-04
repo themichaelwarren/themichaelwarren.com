@@ -1,20 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&subset=japanese');
 
-td {
-    border-bottom: 1px solid black!important;
-}
-
 table {
 
 }
 
 th {
-    font-size: 20px;
     text-align: left;
 }
 
 td {
-    padding: 8px 4px!important;
+    border-bottom: 1px solid lightgray!important;
+    padding: 8px 8px 8px 0px!important;
 }
 
 .fa {
