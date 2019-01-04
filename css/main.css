@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&subset=japanese');
 
-.table {
-    font-size: 13px;
+td {
+    border-bottom: 1px solid black!important;
+}
+
+table {
+
 }
 
 th {
@@ -11,10 +15,6 @@ th {
 
 td {
     padding: 8px 4px!important;
-}
-
-tr {
-    border-bottom: 1px solid black!important;
 }
 
 .fa {
