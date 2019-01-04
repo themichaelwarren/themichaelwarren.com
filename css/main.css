@@ -9,7 +9,7 @@
 }
 
 .logo {
-    color: cornflowerblue!important;
+    color: salmon!important;
 }
 
 .img {
@@ -186,7 +186,7 @@ article form {
 
 .navbar a.title {
     background: #fff;
-    color: cornflowerblue;
+    color: salmon;
 }
 
 .navbar a.title:hover {
