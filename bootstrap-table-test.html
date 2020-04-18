@@ -1,0 +1,59 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+    
+$.getJSON("https://spreadsheets.google.com/feeds/list/1BhFdeansYtSCf6D6rsiyzlGP2sQgm6sdTFOIMt1exfY/od6/public/values?alt=json", function (data) {
+
+      var sheetData = data.feed.entry;
+
+      var i;
+      for (i = 0; i < sheetData.length; i++) {
+
+        var name = data.feed.entry[i]['gsx$_cn6ca']['$t'];
+        var age = data.feed.entry[i]['gsx$_cokwr']['$t'];
+
+        document.getElementById('demo').innerHTML += ('<tr>'+'<td>'+name+'</td>'+'<td>'+age+'</td>'+'</tr>');
+
+      }
+    });    
+</script>    
+</head>
+<body>
+  <div class="container-fluid">
+      <br>
+<input class="form-control" id="myInput" type="text" placeholder="Search..">
+      <br>
+    <!-- Table  -->
+    <table class="table table bordered table-striped" id="myTable">
+      <!-- Table head -->
+      <thead>
+        <tr>
+          <th>日本語</th>
+          <th>English</th>
+        </tr>
+      </thead>
+      <!-- Table head -->
+
+      <!-- Table body -->
+      <tbody id="demo">
+
+      
+      </tbody>
+      <!-- Table body -->
+    </table>
+    <!-- Table  -->
+
+  </div>
+</body>
